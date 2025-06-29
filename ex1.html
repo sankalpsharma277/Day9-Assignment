@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //ques1
+        function setAlarm(time, message) {
+  let now = new Date();
+  let alarmTime = new Date(time);
+
+  let delay = alarmTime - now;
+
+  if (delay < 0) {
+    console.log("Time already passed!");
+    return;
+  }
+
+  setTimeout(() => {
+    console.log(" Alarm: " + message);
+  }, delay);
+}
+
+
+setAlarm("2025-06-22T18:40:00", "Wake up and code!");
+   </script>
+</body>
+</html>
