@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator with Callback</title>
+</head>
+
+<body>
+
+    <script>
+        function calculate(a, b, operation) {
+            return operation(a, b);
+        }
+
+        function add(x, y) {
+            return x + y;
+        }
+
+        function subtract(x, y) {
+            return x - y;
+        }
+
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        function divide(x, y) {
+            return y !== 0 ? x / y : "Cannot divide by zero";
+        }
+
+        console.log("Add: " + calculate(10, 5, add));
+        console.log("Subtract: " + calculate(10, 5, subtract));
+        console.log("Multiply: " + calculate(10, 5, multiply));
+        console.log("Divide: " + calculate(10, 5, divide));     
+    </script>
+
+</body>
+
+</html>
