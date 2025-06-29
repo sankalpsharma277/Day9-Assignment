@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recursive Countdown</title>
+</head>
+
+<body>
+
+    <script>
+        function countdown(n) {
+            if (n === 0) {
+                console.log("🚀 Blast Off!");
+            } else {
+                console.log(n);
+                setTimeout(() => {
+                    countdown(n - 1);
+                }, 1000);
+            }
+        }
+
+        countdown(5);
+    </script>
+
+</body>
+
+</html>
