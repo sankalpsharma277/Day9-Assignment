@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tax Calculator</title>
+</head>
+
+<body>
+
+    <script>
+        function calculateAfterTax(amount, taxPercent) {
+            let taxAmount = (amount * taxPercent) / 100;
+            let totalAmount = amount + taxAmount;
+            return totalAmount;
+        }
+
+        let originalAmount = 1000;
+        let taxRate = 18;
+
+        let finalAmount = calculateAfterTax(originalAmount, taxRate);
+        console.log(`Original: ₹${originalAmount}, Tax: ${taxRate}%, After Tax: ₹${finalAmount.toFixed(2)}`);
+    </script>
+
+</body>
+
+</html>
